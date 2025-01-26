@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multithreading in JS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 60vw;
+            padding: 1rem;
+            margin: 6rem auto;
+        }
+
+        [type="text"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid gray;
+            border-radius: 0.75rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        [type="text"]:focus {
+            outline: 1px solid black;
+            outline-offset: 1px;
+        }
+
+        button {
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+        }
+
+        #loading-txt {
+            display: none;
+            text-align: center;
+        }
+
+        p {
+            overflow-wrap: break-word;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="submitHandler(event)">
+            <label for="nums">
+                <strong>Enter Integers separated by a comma: </strong>(1,2,3)
+            </label>
+            <br />
+            <input type="text" id="nums" autocomplete="off" /><br />
+            <button>Calculate</button>
+
+            <!-- Print something to the console -->
+            <button type="button" class="demo-btn">Click Me</button>
+            <button type="button" class="demo-btn">Hit Me</button>
+        </form>
+
+        <h2 id="loading-txt">Please Wait...</h2>
+
+        <div id="result">
+            <p id="sum"></p>
+            <p id="prod"></p>
+        </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
